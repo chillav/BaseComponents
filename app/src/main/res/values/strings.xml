@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">BaseComponents</string>
     <string name="next">Следующая</string>
+    <string name="list_label">Список</string>
 </resources>
