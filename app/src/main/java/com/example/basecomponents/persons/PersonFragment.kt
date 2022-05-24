@@ -16,8 +16,8 @@ class PersonFragment : Fragment(R.layout.fragment_pesons) {
             adapter.persons = persons
         }
 
-        val recycle = view.findViewById<RecyclerView>(R.id.recycler)
-        recycle.adapter = adapter
+        val recycler = view.findViewById<RecyclerView>(R.id.recycler)
+        recycler.adapter = adapter
 
         super.onViewCreated(view, savedInstanceState)
     }

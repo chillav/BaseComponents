@@ -4,15 +4,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.basecomponents.R
 
 class PersonsAdapter : RecyclerView.Adapter<PersonViewHolder>() {
     var persons: List<String> = emptyList()
         set(value) {
+            val diffUtil = DiffCallback(persons, value)
+            val diffResults = DiffUtil.calculateDiff(diffUtil)
             field = value
-            // TODO использовать diff utils
-            notifyDataSetChanged()
+            diffResults.dispatchUpdatesTo(this)
         }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PersonViewHolder {
@@ -29,8 +31,23 @@ class PersonsAdapter : RecyclerView.Adapter<PersonViewHolder>() {
 
     override fun getItemCount() = persons.size
 
-}
+    private class DiffCallback(
+        private val oldList: List<String>,
+        private val newList: List<String>
+    ) : DiffUtil.Callback() {
+        override fun getOldListSize(): Int = oldList.size
 
+        override fun getNewListSize(): Int = newList.size
+
+        override fun areItemsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
+            return oldList[oldItemPosition] == newList[newItemPosition]
+        }
+
+        override fun areContentsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
+            return oldList[oldItemPosition] == newList[newItemPosition]
+        }
+    }
+}
 
 class PersonViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     val name: TextView = itemView.findViewById(R.id.text_name)

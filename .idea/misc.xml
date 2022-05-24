@@ -4,11 +4,13 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/79215/AndroidStudioProjects/BaseComponents/app/src/main/res/drawable/ic_baseline_emoji_emotions_24.xml" value="0.1615" />
+        <entry key="..\:/Users/79215/AndroidStudioProjects/BaseComponents/app/src/main/res/drawable/ic_smile.xml" value="0.1615" />
         <entry key="..\:/Users/79215/AndroidStudioProjects/BaseComponents/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/79215/AndroidStudioProjects/BaseComponents/app/src/main/res/layout/activity_second.xml" value="0.25" />
         <entry key="..\:/Users/79215/AndroidStudioProjects/BaseComponents/app/src/main/res/layout/fragment_list.xml" value="0.25" />
         <entry key="..\:/Users/79215/AndroidStudioProjects/BaseComponents/app/src/main/res/layout/fragment_pesons.xml" value="0.25" />
         <entry key="..\:/Users/79215/AndroidStudioProjects/BaseComponents/app/src/main/res/layout/item_person.xml" value="0.25" />
+        <entry key="..\:/Users/79215/AndroidStudioProjects/BaseComponents/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1615" />
       </map>
     </option>
   </component>

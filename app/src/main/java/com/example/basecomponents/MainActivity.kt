@@ -14,6 +14,5 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
             setReorderingAllowed(true)
             add<PersonFragment>(R.id.fragment_container)
         }
-
     }
 }
