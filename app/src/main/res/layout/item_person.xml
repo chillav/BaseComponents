@@ -10,10 +10,11 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_margin="16dp"
-        android:src="@drawable/ic_smile"
+        android:src="@drawable/ic_avatar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/text_name"

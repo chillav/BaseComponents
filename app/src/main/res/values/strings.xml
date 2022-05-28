@@ -2,4 +2,10 @@
     <string name="app_name">BaseComponents</string>
     <string name="next">Следующая</string>
     <string name="list_label">Список</string>
+    <string name="hint_select_your_gender">Select your gender</string>
+    <string name="hint_phone_number">Phone number</string>
+    <string name="hint_last_name">Last name</string>
+    <string name="hint_first_name">First name</string>
+    <string name="hint_birthday">What is your date of birth?</string>
+    <string name="button_update_profile">Update profile</string>
 </resources>

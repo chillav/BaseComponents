@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.basecomponents.R
 
-class PersonsAdapter : RecyclerView.Adapter<PersonViewHolder>() {
+class PersonsAdapter(val onItemClick: (String) -> Unit) : RecyclerView.Adapter<PersonViewHolder>() {
     var persons: List<String> = emptyList()
         set(value) {
             val diffUtil = DiffCallback(persons, value)
@@ -20,6 +20,11 @@ class PersonsAdapter : RecyclerView.Adapter<PersonViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PersonViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_person, parent, false)
+
+        view.setOnClickListener {
+            val text = view.findViewById<TextView>(R.id.text_name).text.toString()
+            onItemClick(text)
+        }
 
         return PersonViewHolder(view)
     }
