@@ -129,7 +129,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/text_birthday"
+            android:id="@+id/text_input_layout_birthday"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
@@ -142,6 +142,7 @@
             app:layout_constraintTop_toBottomOf="@+id/gender_dropdown_menu">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/text_birthday_date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="16sp" />
@@ -153,10 +154,10 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:clickable="true"
-            app:layout_constraintTop_toTopOf="@id/text_birthday"
-            app:layout_constraintStart_toStartOf="@id/text_birthday"
-            app:layout_constraintEnd_toEndOf="@id/text_birthday"
-            app:layout_constraintBottom_toBottomOf="@id/text_birthday"
+            app:layout_constraintTop_toTopOf="@id/text_input_layout_birthday"
+            app:layout_constraintStart_toStartOf="@id/text_input_layout_birthday"
+            app:layout_constraintEnd_toEndOf="@id/text_input_layout_birthday"
+            app:layout_constraintBottom_toBottomOf="@id/text_input_layout_birthday"
             android:focusable="true" />
 
         <com.google.android.material.button.MaterialButton
@@ -168,7 +169,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text_birthday" />
+            app:layout_constraintTop_toBottomOf="@id/text_input_layout_birthday" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
