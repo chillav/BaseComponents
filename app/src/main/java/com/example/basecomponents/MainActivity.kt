@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.add
 import androidx.fragment.app.commit
-import com.example.basecomponents.profile.ProfileFragment
+import com.example.basecomponents.persons.PersonFragment
 
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
         supportFragmentManager.commit {
             setReorderingAllowed(true)
-            add<ProfileFragment>(R.id.fragment_container)
+            add<PersonFragment>(R.id.fragment_container)
         }
     }
 }
