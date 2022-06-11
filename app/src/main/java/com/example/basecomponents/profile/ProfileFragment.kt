@@ -5,9 +5,12 @@ import android.os.Bundle
 import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
+import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.commit
 import androidx.fragment.app.viewModels
 import com.example.basecomponents.R
+import com.example.basecomponents.person_description.PersonDescriptionFragment
 import com.google.android.material.textfield.TextInputEditText
 import java.util.*
 
@@ -33,6 +36,7 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
 
         val birthdayAreaClick = view.findViewById<View>(R.id.view_birthday_click_area)
         val birthdayDate = view.findViewById<TextInputEditText>(R.id.text_birthday_date)
+        val avatar = view.findViewById<CardView>(R.id.image_avatar)
 
         birthdayAreaClick.setOnClickListener {
             DatePickerDialog(
@@ -42,6 +46,13 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
                     birthdayDate.setText(dateString)
                 }, year, month, day
             ).show()
+        }
+
+        avatar.setOnClickListener {
+            activity?.supportFragmentManager?.commit {
+                setReorderingAllowed(true)
+                replace(R.id.fragment_container, PersonDescriptionFragment()).addToBackStack(null)
+            }
         }
     }
 }

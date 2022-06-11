@@ -10,7 +10,7 @@ import com.example.basecomponents.R
 import com.example.basecomponents.profile.ProfileFragment
 
 
-class PersonFragment : Fragment(R.layout.fragment_pesons) {
+class PersonFragment : Fragment(R.layout.fragment_persons) {
     private val viewModel: PersonsViewModel by viewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

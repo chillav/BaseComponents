@@ -9,4 +9,6 @@
     <string name="hint_birthday">What is your date of birth?</string>
     <string name="button_update_profile">Update profile</string>
     <string name="birthday_pattern">%s.%s.%s</string>
+    <string name="description">Описание</string>
+    <string name="scores">Баллы</string>
 </resources>
